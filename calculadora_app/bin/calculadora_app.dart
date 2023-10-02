@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:calculadora_app/Classes/Pessoa.dart';
@@ -8,7 +9,7 @@ void main(List<String> arguments) {
  print("=== CALCULADORA DE IMC ===");
  print("Digite o seu nome: ");
  
- String nome = stdin.readLineSync();
+ String nome = stdin.readLineSync(encoding: utf8);
  pessoa.setNome(nome);
 
 }
