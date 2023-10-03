@@ -24,7 +24,21 @@ void main(List<String> arguments) {
   double peso = double.parse(input2!);
   pessoa.setPeso(peso);
 
-  String imc = calcularIMC(peso, altura);
+  double imc = calcularIMC(peso, altura);
 
-  print("$nome, seu IMC e de: $imc");
+  if (imc < 18.5) {
+    print("$nome, seu IMC e de: $imc. Voce esta abaixo do peso!");
+  }
+  else if(imc >= 18.5 || imc <=24.99){
+     print("$nome, seu IMC e de: $imc. Voce esta com o peso normal!");
+  }
+  else if(imc >=25.0 || imc <=29.99){
+     print("$nome, seu IMC e de: $imc. Voce esta com sobrepeso!");
+  }
+  else if(imc >=30)
+  {
+     print("$nome, seu IMC e de: $imc. Voce esta com obesidade!");
+  }
+
+
 }
